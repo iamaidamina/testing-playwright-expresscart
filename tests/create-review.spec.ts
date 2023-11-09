@@ -25,7 +25,7 @@ let review = {
 }
 
 
-test('Go to Costumer Login Page', async ({ page }, testInfo) => {
+test('create a review', async ({ page }, testInfo) => {
   utils = new Utils(page);
   await page.goto('http://127.0.0.1:1111/');
   homePage = new HomePage(page);
