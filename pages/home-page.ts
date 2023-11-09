@@ -15,11 +15,14 @@ export class HomePage {
     //readonly getStartedButton: Locator
     readonly customerLoginButton: Locator
 
+     xpathProduct: string
+
     //constructor
     constructor(page: Page) {
         this.page = page;
         //this.getStartedButton = page.getByRole('link', { name: 'Get started' })
-        this.customerLoginButton= page.locator('xpath=//*[@href="/customer/account"]')
+        this.customerLoginButton = page.locator('xpath=//*[@href="/customer/account"]');
+        this.xpathProduct = 'xpath=//*[@href="/product/';
     }
 
 
@@ -38,6 +41,14 @@ export class HomePage {
     async clickCustomerLoginButton() { 
         await this.customerLoginButton.click();
     }
+
+    async pickProduct(product) {
+        this.xpathProduct += product.name + '"]';
+        await this.page.locator(this.xpathProduct).click();
+        //await this.customerLoginButton.click();
+    }
+
+
     
     
 }
