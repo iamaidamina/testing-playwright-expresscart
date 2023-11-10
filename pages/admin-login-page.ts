@@ -1,31 +1,35 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, Page, expect } from "@playwright/test";
 
-/*
-Locate by CSS or XPath
-await page.locator('css=button').click();
-await page.locator('xpath=//button').click();
 
-await page.locator('button').click();
-await page.locator('//button').click();
-*/
 
 export class AdminLoginPage { 
 
+   
     //variables
     readonly page: Page;
-    readonly getStartedButton: Locator
+    readonly emailTextField: Locator
+    readonly passwordTextField: Locator
+    readonly signInButton:Locator
 
     //constructor
     constructor(page: Page) {
         this.page = page;
-        this.getStartedButton = page.getByRole('link', { name: 'Get started' })
+        this.emailTextField = page.locator('xpath=//*[@id="email"]')
+        this.passwordTextField = page.locator('xpath=//*[@id="password"]')
+        this.signInButton = page.locator('xpath=//*[@id="loginForm"]')
     }
 
 
     //methos
-    async clickGetStarted() { 
-        await this.getStartedButton.click();
-    
+    async checkUrl(regExp: RegExp) {
+       
+        await expect(this.page).toHaveURL(regExp);
+    }
+
+    async fillLoginForm(admin) { 
+        await this.emailTextField.fill(admin.email)
+        await this.passwordTextField.fill(admin.password) 
+        await this.signInButton.click()
     }
 }
 
