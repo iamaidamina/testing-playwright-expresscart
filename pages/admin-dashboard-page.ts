@@ -8,11 +8,13 @@ export class AdminDashboardPage {
     //variables
     readonly page: Page;
     readonly customerOption: Locator;
+    readonly reviewOption: Locator;
 
     //constructor
     constructor(page: Page) {
         this.page = page;
         this.customerOption = page.locator('xpath=//*[@href="/admin/customers"]')
+        this.reviewOption = page.locator('xpath=//*[@href="/admin/reviews"]')
 
     }
 
@@ -26,6 +28,12 @@ export class AdminDashboardPage {
     async goToCustomerModule() { 
 
         this.customerOption.click()
+      
+    }
+
+    async goToReviewModule() { 
+
+        this.reviewOption.click()
       
     }
 }
