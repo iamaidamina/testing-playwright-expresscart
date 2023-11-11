@@ -22,7 +22,7 @@ export class UserModulePage {
     async pickUser(user) {
         let j: number = 1;
         
-        for (let i: number = 14; i <= 17; i++) {
+        for (let i: number = 14; i <= 22; i++) {
             let valueFinded = String(await this.page.locator(`xpath=(//li)[${i}]`).textContent())
             this.value = valueFinded.includes(user.name)
             if (this.value) {

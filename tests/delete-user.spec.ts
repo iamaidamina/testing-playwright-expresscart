@@ -13,7 +13,7 @@ let admin = {
 };
 let adminDashboardPage: AdminDashboardPage;
 let userModulePage: UserModulePage;
-let user = {name:"pepe suarez"}
+let user = {name:""}
 
 
 test('delete a user', async ({ page }, testInfo) => {
@@ -36,7 +36,7 @@ test('delete a user', async ({ page }, testInfo) => {
   userModulePage = new UserModulePage(page);
   userModulePage.pickUser(user);
   userModulePage.checkResult();
-  await page.waitForTimeout(4000);
+  await page.waitForTimeout(10000);
   await utils.takeScreenShot(testInfo);
   
  
