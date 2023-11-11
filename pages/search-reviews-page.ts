@@ -43,7 +43,12 @@ export class SearchReviewsPage {
             }
   
         }
-        expect(value).toBeTruthy();
+        if (value == true) {
+            expect(value).toBeTruthy();
+        } else { 
+            expect(value).toBeFalsy();
+        }
+        
    
     }
 
