@@ -30,4 +30,4 @@ To get started with Express-Cart using Docker, follow these steps:
 
 ### This is what the automation looks like.
 
-![Alt Text](multimedia/automation.gif)
+![Alt Text](multimedia/automation_video.gif)
