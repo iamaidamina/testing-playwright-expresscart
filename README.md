@@ -30,7 +30,4 @@ To get started with Express-Cart using Docker, follow these steps:
 
 ### This is what the automation looks like.
 
-<video width="320" height="240" controls>
-  <source src="https://jmp.sh/s/6pmrTMHfmRRmYAZErNYM" type="video/webm">
-  Your browser does not support the video tag.
-</video>
+![Alt Text](multimedia/automation.gif)
