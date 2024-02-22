@@ -30,4 +30,4 @@ To get started with Express-Cart using Docker, follow these steps:
 
 ### This is what the automation looks like.
 
-![](https://jmp.sh/s/6pmrTMHfmRRmYAZErNYM)
+![image](https://jmp.sh/s/6pmrTMHfmRRmYAZErNYM)
