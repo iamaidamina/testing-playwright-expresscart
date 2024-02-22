@@ -28,6 +28,6 @@ To get started with Express-Cart using Docker, follow these steps:
 2. Implement automation for the selected GUI test cases using PlayWright in TypeScript.
 3. Execute the automation
 
-### This is what the automation looks like.
+### This is a sample of what the automation looks like.
 
 ![Alt Text](multimedia/automation_video.gif)
